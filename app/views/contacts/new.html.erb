@@ -1,0 +1,13 @@
+<!-- お問い合わせフォーム -->
+<h3>お問い合わせ</h3>
+
+<!-- form_with => dbに保存しない -->
+<%= form_with(model: @contact, local: true) do |f| %>
+  <%= f.label :name, "名前" %>
+  <%= f.text_field :name%>
+  <%= f.label :email, "メールアドレス" %>
+  <%= f.email_field :email, autocomplete: "email" %>
+  <%= f.label :content, "内容" %>
+  <%= f.text_field :content %>
+  <%= f.submit "送る" %>
+<% end %>
